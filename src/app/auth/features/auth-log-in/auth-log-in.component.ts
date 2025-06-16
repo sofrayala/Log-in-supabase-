@@ -36,7 +36,7 @@ export default class AuthLogInComponent {
         email: this.form.value.email ?? '',
         password: this.form.value.password ?? '',
       });
-      this._router.navigateByUrl('/');
+      this._router.navigateByUrl('/note-list');
       console.log('Logged in!');
     } catch (error) {
       if (error instanceof Error) {
