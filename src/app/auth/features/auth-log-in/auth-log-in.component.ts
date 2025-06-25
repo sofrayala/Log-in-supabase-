@@ -1,11 +1,6 @@
 import { Component, inject } from '@angular/core';
 
-import {
-  FormBuilder,
-  FormControl,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthServiceService } from '../../data-access/auth-service.service';
 import { Router, RouterLink, RouterModule } from '@angular/router';
 import { LogInInterface } from '../../../shared/interfaces/log-in-interface';
@@ -32,7 +27,7 @@ export default class AuthLogInComponent {
   async submit() {
     if (this.form.invalid) return;
     try {
-      const { error } = await this._authService.logIn({
+      await this._authService.logIn({
         email: this.form.value.email ?? '',
         password: this.form.value.password ?? '',
       });
