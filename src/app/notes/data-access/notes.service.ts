@@ -16,6 +16,8 @@ export class NotesService {
     error: false,
   });
 
+  notesLoaded = signal(false);
+
   //selectors
 
   notes = computed(() => this._state().notes);
@@ -51,6 +53,7 @@ export class NotesService {
         ...state,
         loading: false,
       }));
+      this.notesLoaded.set(true);
     }
   }
 
