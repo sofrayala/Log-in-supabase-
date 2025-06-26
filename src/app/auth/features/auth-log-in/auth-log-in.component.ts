@@ -4,7 +4,7 @@ import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { AuthServiceService } from '../../data-access/auth-service.service';
 import { Router, RouterLink, RouterModule } from '@angular/router';
 import { LogInInterface } from '../../../shared/interfaces/log-in-interface';
-import { NavBarComponent } from '../../../shared/nav-bar/nav-bar.component';
+import { NavBarComponent } from '../../../components/nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-auth-log-in',

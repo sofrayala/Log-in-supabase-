@@ -3,7 +3,7 @@ import { RouterLink } from '@angular/router';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { SignUpInterface } from '../../../shared/interfaces/sign-up-interface';
 import { AuthServiceService } from '../../data-access/auth-service.service';
-import { NavBarComponent } from '../../../shared/nav-bar/nav-bar.component';
+import { NavBarComponent } from '../../../components/nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-auth-sign-up',
