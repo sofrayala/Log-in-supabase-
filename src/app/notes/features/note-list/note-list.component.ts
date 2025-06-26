@@ -5,9 +5,10 @@ import { AuthServiceService } from '../../../auth/data-access/auth-service.servi
 import { NotesService } from '../../data-access/notes.service';
 import { NoteForm } from '../../../shared/interfaces/note-form';
 import { Note } from '../../../shared/interfaces/note';
+import { NavBarComponent } from '../../../shared/nav-bar/nav-bar.component';
 @Component({
   selector: 'app-note-list',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, NavBarComponent],
   templateUrl: './note-list.component.html',
   styleUrl: './note-list.component.css',
 })
@@ -35,10 +36,10 @@ export class NoteListComponent implements AfterViewInit {
     end_date: this._formBuilder.control(null, Validators.required),
   });
 
-  async logOut() {
-    await this._authService.signOut();
-    this._router.navigateByUrl('/log-in');
-  }
+  // async logOut() {
+  //   await this._authService.signOut();
+  //   this._router.navigateByUrl('/log-in');
+  // }
 
   ngAfterViewInit(): void {
     this._notesService.getAllNotes();
