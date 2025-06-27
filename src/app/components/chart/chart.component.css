@@ -1,5 +1,9 @@
 #chart-div {
-  width: 500px;
+  width: 600px;
   max-width: 90vw;
   margin: auto;
+}
+
+p {
+  margin: 3rem 0rem;
 }

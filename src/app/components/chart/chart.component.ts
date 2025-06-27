@@ -34,7 +34,19 @@ export class ChartComponent {
   chartType: ChartType = 'bar';
   chartData: ChartData<'bar'> = {
     labels: [],
-    datasets: [{ label: 'Rating', data: [] }],
+    datasets: [
+      {
+        label: 'Visited countries rating',
+        data: [],
+        backgroundColor: [
+          '#63BBF2',
+          '#63D8F2',
+          '#305912',
+          '#A1A60A',
+          '#F2785C',
+        ],
+      },
+    ],
   };
   constructor() {
     this.notesService.getAllNotes();
