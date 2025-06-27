@@ -25,7 +25,7 @@ import { NotesService } from '../../notes/data-access/notes.service';
 
 @Component({
   selector: 'app-chart',
-  imports: [NavBarComponent, BaseChartDirective],
+  imports: [BaseChartDirective, NavBarComponent],
   templateUrl: './chart.component.html',
   styleUrl: './chart.component.css',
 })
